@@ -12,7 +12,6 @@ class LinkedList:
     def __repr__(self):
         node = self.head 
         nodes = []
-        
         while node is not None:
             nodes.append(str(node.data))
             node = node.next
@@ -67,7 +66,7 @@ class LinkedList:
         if self.head is None:
             raise Exception('The list is empty')
         if self.head.data == target_node_data:
-            self.head.next = self.head 
+            self.head = self.head.next
             return         
         
         prev_node = self.head 
@@ -105,5 +104,3 @@ if __name__ == '__main__':
     llist.add_before('c', Node('Bambom!'))
     llist.remove_node('d')
     print('operations:\t', llist)
-
-    
